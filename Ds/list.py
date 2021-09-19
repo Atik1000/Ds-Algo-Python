@@ -30,8 +30,9 @@ vowel = ['a', 'e', 'i', 'u']
 
 
 # 'o' is inserted at index 3 (4th position)
-# vowel.insert(3, 'o')
-# print('List:', vowel+['o'])
+vowel.insert(3, 'o')
+vowel[2] = 'A'
+# print('List:', vowel)
 
 
 # Remove
@@ -63,9 +64,9 @@ number = [1,2,3,4,5,6,7,8,9,10,1,22,2,2]
 # Searching for a letter in a list
 # The index() method returns the index of the specified element in the list.
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-index = alphabet.index('1', 0, len(alphabet))
-# index =alphabet.index('k',15,20)
-print(index)
+# index = alphabet.index('1', 0, len(alphabet))
+index =alphabet.index('k',1,20)
+# print(index)
 
 
 # Another
@@ -135,3 +136,16 @@ prime_numbers.clear()
 # for i in range(3):
 #     for j in range(3):
 #         print(matrix[i][j],'\t')
+
+
+number= (1,2,3,4,5,6,7,8,9,10)
+max=number[0]
+for i in range(len(number)):
+    if number[i]>max:
+        max=number[i]
+print(max)
+
+for i in number:
+    if i>max:
+        max=i
+print(max)
