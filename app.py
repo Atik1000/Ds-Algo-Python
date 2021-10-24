@@ -1,114 +1,18 @@
-# A=int(input())
-# B=int(input())
-# X=A+B
-# print('X =' ,X,end='\n')
-
-
-# π = 3.14159
-# R=float(input())
-# A=π*R**2
-
-# print('A=%.4f' %A,end='\n')
-# print(f'A={A:.4f}') 
-
-# def sum(A, B):
-#     return A + B
-# A=int(input())
-# B=int(input())
-# SOMA=sum(A, B)
-# print('SOMA =' ,SOMA,end='\n')
-
-# A=int(input())
-# B=int(input())
-# PROD=A*B
-# print('PROD =' ,PROD,end='\n')
-
-
-# a = float(input())
-# b = float(input())
-# c = float(input())
-
-# media = (a/10 * 2) + (b/10 * 3) + (c/10 * 5)
-
-# print(f'MEDIA = {media:.1f}') 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(self.path[1:].encode())
+        self.wfile.write(b'\n')
+        self.wfile.write(b'Hello World!')
+
+def main():
+    httpd = HTTPServer(('localhost', 8080), RequestHandler)
+    print('Serving HTTP on port 8080...')
+    httpd.serve_forever()
+
+if __name__ == '__main__':
+    main()

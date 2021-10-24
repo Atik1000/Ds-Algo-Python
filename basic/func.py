@@ -108,7 +108,7 @@
 
 
 
-# list comprehension [expr for val in collection if condition]
+#  list comprehension [expr for val in collection if condition]
 
 # num=[1,2,3,4,5,6,7,8,9,10]
 # numbers = filter(lambda num: num % 2 == 0, num)
@@ -146,13 +146,20 @@
 
 
 
+# callback function
+
+def callbackFunc(s):
+    print('Length of the text file is : ', s)
 
 
-a=[1,2,3,4,5,6,7,8]
-b=[9,10,11,12]
-a.extend(b)
-print(a)
+def printFileLength(path, callback):
+    f = open(path, "r")
+    length = len(f.read())
+    f.close()
+    callback(length)
 
+if __name__ == '__main__':
+    printFileLength("sample.txt", callbackFunc)
 
 
 

@@ -40,8 +40,8 @@ vowel[2] = 'A'
 # list remove method
 # Syntax list.remove(element)
 number = [1,2,3,4,5,6,7,8,9,10,10,10,10]
-# number.remove(5)
-# print(number)
+number.remove(5)
+print(number)
 
 
 # list pop method
@@ -75,8 +75,8 @@ index =alphabet.index('k',1,20)
 # list reverse method
 # Syntax list.reverse()
 number=[1,2,3,4,5,6,7,8,9,10]
-# number.reverse()
-# print(number)
+number.reverse()
+print(number)
 
 # list short method
 # syntax list.sort()
